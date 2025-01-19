@@ -1,0 +1,8 @@
+[Container]
+ContainerName=zap2xml
+Image=localhost/sirianni/zap2xml
+Volume=/var/cache/jellyfin/xmltv-staging:/data
+Exec=-u <...username...> -p <...password...> -U -I -D -o /data/xmltv.xml
+
+[Service]
+Type=oneshot
